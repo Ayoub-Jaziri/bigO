@@ -1,0 +1,27 @@
+ALGORITHM bigO
+
+
+VAR
+ arr : ARRAY_OF INTEGER;
+ i,j,m:INTEGER;
+ i=0;
+ j=0;
+ m=0;
+ 
+
+
+BEGIN 
+    Read(arr);
+    FOR i FROM 0 TO arr.length STEP 1  DO
+    FOR j FROM 0 TO i STEP 1  DO
+           IF (arr[j]>arr[i]) THEN
+           w:=arr[j];
+           arr[j]:=arr[i];
+           arr[i]:=w;
+        END_IF
+    END_FOR 
+    END_FOR
+
+    Write(arr);
+
+END
